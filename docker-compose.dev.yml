@@ -1,0 +1,9 @@
+services:
+  vpn-port-concierge:
+    # image: ghcr.io/tpoisson/vpn-port-concierge:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vpn-port-concierge-dev
+    env_file: .env
+    restart: unless-stopped
