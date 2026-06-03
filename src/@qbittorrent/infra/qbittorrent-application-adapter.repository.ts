@@ -11,7 +11,6 @@ type ConnectionOptions = {
  * https://github.com/qbittorrent/qBittorrent/wiki/WebUI-API-(qBittorrent-5.0)
  */
 export class QbittorrentApplicationAdapterRepository implements ApplicationAdapterRepository {
-  private static readonly DEFAULT_INTERFACE = "lo";
   
   constructor(
     private readonly logger: ILogger,
@@ -38,7 +37,7 @@ export class QbittorrentApplicationAdapterRepository implements ApplicationAdapt
     this.logger.info("Setting port on qBittorrent %d %s ...", port, interfaceName);
     const jsonPayload = {
       listen_port: port,
-      current_network_interface: port > 0 ? interfaceName : QbittorrentApplicationAdapterRepository.DEFAULT_INTERFACE,
+      current_network_interface: interfaceName,
       random_port: false,
       upnp: false,
     };

@@ -1,4 +1,4 @@
-import { GluetunVpnAdapterRepository } from "./@gluetun/infra/gluetun-vpn-adapter.repository.js";
+import { GluetunVpnAdapterRepository } from "./@gluetun/infra/gluetun/gluetun-vpn-adapter.repository.js";
 import { QbittorrentApplicationAdapterRepository } from "./@qbittorrent/infra/qbittorrent-application-adapter.repository.js";
 import { SyncBetweenVpnAndAppUseCase } from "./port-syncer/application/use-cases/sync-between-vpn-and-app.use-case.js";
 import { log } from "./logger.js";

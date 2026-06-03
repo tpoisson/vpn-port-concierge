@@ -1,0 +1,75 @@
+{
+  "type": "wireguard",
+  "provider": {
+    "name": "protonvpn",
+    "server_selection": {
+      "vpn": "wireguard",
+      "countries": ["netherlands"],
+      "categories": null,
+      "regions": null,
+      "cities": null,
+      "isps": null,
+      "names": null,
+      "numbers": null,
+      "hostnames": null,
+      "owned_only": false,
+      "free_only": false,
+      "premium_only": false,
+      "stream_only": false,
+      "multi_hop_only": false,
+      "port_forward_only": true,
+      "secure_core_only": false,
+      "tor_only": false,
+      "openvpn": {
+        "config_file_path": "",
+        "protocol": "udp",
+        "endpoint_ip": "0.0.0.0",
+        "custom_port": 0,
+        "pia_encryption_preset": ""
+      },
+      "wireguard": {
+        "endpoint_ip": "0.0.0.0",
+        "endpoint_port": 0,
+        "public_key": ""
+      }
+    },
+    "port_forwarding": {
+      "enabled": true,
+      "provider": "protonvpn",
+      "status_file_path": "/tmp/gluetun/forwarded_port",
+      "up_command": "",
+      "down_command": "",
+      "listening_port": 0,
+      "username": "",
+      "password": ""
+    }
+  },
+  "openvpn": {
+    "version": "2.6",
+    "user": "",
+    "password": "",
+    "config_file_path": "",
+    "ciphers": null,
+    "auth": "",
+    "cert": "",
+    "key": "",
+    "encrypted_key": "",
+    "key_passphrase": "",
+    "pia_encryption_preset": "",
+    "mssfix": 0,
+    "interface": "tun0",
+    "process_user": "nonrootuser",
+    "verbosity": 1,
+    "flags": null
+  },
+  "wireguard": {
+    "private_key": "private_key",
+    "pre_shared_key": "",
+    "addresses": ["10.2.0.2/32"],
+    "allowed_ips": ["0.0.0.0/0", "::/0"],
+    "interface": "tun0",
+    "persistent_keep_alive_interval": 0,
+    "mtu": 1320,
+    "implementation": "auto"
+  }
+}
